@@ -1,13 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import GoogleOauth from './GoogleOauth';
+
 class Header extends React.Component{
   render(){
     const { headerContainer} = styles;
     return(
       <div style={headerContainer}>
         <div><Link to="/" >babatunde</Link></div>
-        <div><button>login</button></div>
+        <div><GoogleOauth /></div>
         <div><button>register</button></div>
         <div><button>streams</button></div>
       </div>

@@ -3,7 +3,7 @@ const path = require('path');
 const HTMLwebpackPlugin = require('html-webpack-plugin');
 const Vendor_Library = [
   'react','react-dom','axios','react-redux','redux','redux-thunk',
-  'react-router-dom'
+  'react-router-dom','react-loader-spinner','redux-form'
 ];
 
 module.exports = {
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         use:['style-loader','css-loader'],
-        test:/\.css$/
+        test:/\.s?css$/
       },
       {
         test:/\.(jpe.?g|png|gif|svg)$/,

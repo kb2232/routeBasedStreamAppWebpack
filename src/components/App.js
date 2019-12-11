@@ -1,13 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import {testAction} from '../actions';
 
 class App extends React.Component {
-	componentDidMount(){
-		this.props.testAction();
-	}
+
 	renderhome(){
 		return <div>HI - {this.props.test}</div>
 	}
@@ -19,7 +15,7 @@ class App extends React.Component {
 					<div>
 						<Link to="/streams/create">create Streams</Link>
 						<br />
-						<Link to="/streams/showlist">Delete Streams</Link>
+						<Link to="/streams/delete">Delete Streams</Link>
 						<br />
 						<Link to="/streams/show">show Streams</Link>
 						<br />
@@ -29,10 +25,6 @@ class App extends React.Component {
 		);
 	}
 }
-const mapstate2props = state=>{
-  return {
-    test:state.testReducer
-  }
-}
-export default connect(mapstate2props,{testAction})(App);
+
+export default App;
 
